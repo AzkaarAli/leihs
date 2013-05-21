@@ -1,0 +1,20 @@
+!!! 5
+%html{:lang => I18n.locale}
+
+  %head
+    %meta{:charset => 'utf-8'}
+    %title
+      = yield :title
+      = " | " unless (yield :title).blank?
+      = "leihs"
+    = stylesheet_link_tag "application"
+    = favicon_link_tag "borrow/favicon.ico", :type => "image/x-icon"
+
+    = csrf_meta_tag
+    = yield :head
+
+  %body
+  
+    %header.wrapper.padding-top-m= render :partial => "borrow/topbar"
+
+    = yield

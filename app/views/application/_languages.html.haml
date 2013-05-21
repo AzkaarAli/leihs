@@ -1,0 +1,12 @@
+:ruby  
+  active_language = Language.find_by_locale_name(I18n.locale)
+  align_right ||= nil
+
+%li.topbar-item.separated-left.dropdown-holder
+  %a
+    = active_language.name
+    %i.arrow.down
+  %ul.dropdown.straight-top{:class => align_right.nil? ? "" : "right"}
+    - (Language.active_languages - [active_language]).each do |l|
+      %li
+        %a.dropdown-item{:href => "?locale=#{l.locale_name}"}= l.name

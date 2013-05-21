@@ -1,0 +1,29 @@
+%nav#topbar
+  
+  %a.topbar-logo.padding-horizontal-s{:href => borrow_start_path} leihs
+
+  %ul.topbar-navigation
+
+    %li.topbar-item.topbar-search.separated-left{:class => current_page?("search") ? "active" : nil}
+      = render :partial => 'search'
+    
+    %li.topbar-item.separated-left{:class => true ? "active" : nil}
+      = link_to _("Borrow"), "", :class => "anchor"
+
+    %li.topbar-item.separated-left{:class => false ? "active" : nil}
+      = link_to _("Manage"), "", :class => "anchor"
+
+    %li.topbar-item.separated-left{:class => false ? "active" : nil}
+      = link_to _("Inventory Pools"), "", :class => "anchor"
+    
+    = render :partial => "application/languages"
+
+    %li.topbar-item.dropdown-holder.separated-left{:class => current_page?("current_user") ? "active" : nil}
+      %a
+        = current_user
+        %i.arrow.down
+
+      %ul.dropdown.right.straight-top
+      
+        %li
+          %a.dropdown-item{:href => logout_path}= _("Logout")

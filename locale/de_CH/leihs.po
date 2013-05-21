@@ -2058,3 +2058,9 @@ msgstr "Auswählen"
 
 msgid "Closed Day"
 msgstr "Schliessungstag"
+
+msgid "Borrow"
+msgstr "Ausleihen"
+
+msgid "Manage"
+msgstr "Verwalten"

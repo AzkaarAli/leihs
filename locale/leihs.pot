@@ -1992,3 +1992,9 @@ msgstr ""
 
 msgid "Closed Day"
 msgstr ""
+
+msgid "Borrow"
+msgstr ""
+
+msgid "Manage"
+msgstr ""

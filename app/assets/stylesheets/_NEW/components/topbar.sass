@@ -31,10 +31,11 @@ a.topbar-logo, a.topbar-logo:hover
   float: right
 
 .topbar-item
+  background: rgba(190,190,190,0.2)
+  cursor: pointer
   float: left
   height: 100%
   position: relative
-  cursor: pointer
 
   i
     vertical-align: middle
@@ -53,10 +54,12 @@ a.topbar-logo, a.topbar-logo:hover
     @include text-shadow (0 0 1px rgba(255,255,255,0.4))
 
 .topbar-item.active, .topbar-item:hover 
-  background: rgba(255,255,255,0.5)
+  background: none
+  @include box-shadow(none)
+
   & > a
     color: $darkergrey
-    @include text-shadow (0 0 1px white)
+    @include text-shadow (1px 1px 1px white)
 
   .arrow
     @include change-all-arrow-colors($darkergrey)

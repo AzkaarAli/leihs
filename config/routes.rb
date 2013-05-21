@@ -21,6 +21,11 @@ Leihs::Application.routes.draw do
   match '/backend', :to => "backend/backend#index"
   get '/backend/inventory_pools/:inventory_pool_id/inventory', :to => "backend/inventory#index", :as => "backend_inventory_pool_inventory"
 
+  # Borrow Section
+  namespace :borrow do
+    get "/", :to => "application#start", :as => "start"
+  end
+
 ############################################################################
 ##### Following things are old and have to be checked if still used
 #####
