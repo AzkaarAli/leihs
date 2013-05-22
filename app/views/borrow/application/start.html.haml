@@ -1,1 +1,11 @@
-START
+- content_for :title, _("Borrow")
+
+.wrapper
+
+  .col4of5
+    = render :partial => 'borrow/tabs', :locals => {:navigation => "lending", :current_page => "daily"}
+
+    #daily-view
+      .content-wrapper.straight-top-left
+
+  .col1of5= render :partial => "borrow/order"
