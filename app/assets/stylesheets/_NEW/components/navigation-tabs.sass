@@ -4,9 +4,10 @@
   @include border-top-radius($border-radius-s)
   @include border-bottom-radius(0)
   border-bottom: none
+  padding-top: 1px
   position: relative
-  top: 1px
+  margin-bottom: -1px
 
   &.active
-    margin-bottom: -1px
+    border-bottom: 1px solid white
     z-index: 1001

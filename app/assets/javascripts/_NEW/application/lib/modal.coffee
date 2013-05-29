@@ -26,6 +26,7 @@ class window.App.Modal
     @el.on "hidden", => @destroy
     @el.on "shown", @shown
     $(window).on "resize", @setModalBodyMaxHeight
+    @el.on "click", ".modal-close", => @destroy(true)
     
   setModalBodyMaxHeight: =>
     height = $(window).height() - @el.outerHeight() - ($(window).height()/100*20) + @el.find(".modal-body").height()
