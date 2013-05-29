@@ -28,7 +28,7 @@ Leihs::Application.routes.draw do
 
   # Styleguide
   get "/styleguide", :to => "styleguide#show"
-  get "/styleguide/*all", :to => "styleguide#show"
+  get "/styleguide/:section", :to => "styleguide#show"
 
 ############################################################################
 ##### Following things are old and have to be checked if still used

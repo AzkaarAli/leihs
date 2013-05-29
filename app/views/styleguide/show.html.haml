@@ -2,28 +2,28 @@
 %html
   %head
     %meta{:charset => 'utf-8'}
-    %title= "Styleguide | leihs"
+    %title= "#{@current_section.camelize} | Styleguide | leihs"
     = stylesheet_link_tag "application"
+    = favicon_link_tag "frontend/favicon.ico", :type => "image/x-icon"
 
   %body
 
     .wrapper
 
-      %h1.headline-xxl.padding-vertical-l Styleguide
+      %h1.headline-xxl.padding-vertical-l Styleguide leihs
       
-      .inline-tab-item.active General
-      .inline-tab-item Definitions
-      .inline-tab-item Components
-      .inline-tab-item Combos
+      .padding-left-xs
+        - @sections.each_pair do |k,v|
+          %a.inline-tab-item{:href => styleguide_path(:section => k),:class => (@current_section == k) ? "active" : ""}= k.camelize
 
       .padding-bottom-m
-        .content-wrapper.straight-top.padding-inset-m
+        .content-wrapper.padding-inset-m
 
           .padding-vertical-l
-            - @sections[:general].each do |section|
+            - @sections[@current_section].each do |section|
               %a.button{:href => "##{section}"}= section.camelize
 
-          - @sections[:general].each do |section|
+          - @sections[@current_section].each do |section|
             %h2.headline-l.padding-vertical-l.separated-bottom.margin-bottom-m.margin-top-xl
               %a{:name => "#{section}"}= section.camelize
-            = render :partial => "styleguide/general/#{section}"
+            = render :partial => "styleguide/#{@current_section}/#{section}"

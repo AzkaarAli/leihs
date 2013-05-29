@@ -1,5 +1,13 @@
-window.Libraries ?= {}
-class window.Libraries.TopBarSearchItem
+###
+
+App.TopBarSearchItem
+
+This script provides functionalities for the interactivity with the topbar search item.
+
+###
+
+window.App ?= {}
+class window.App.TopBarSearchItem
 
   constructor: (options)->
     @el = options.el
