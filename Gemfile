@@ -33,6 +33,7 @@ gem 'jquery-rails', '2.1.3' # '~> 2.1' FIXME the version 2.1.4 clashes with unde
 gem 'jquery-tmpl-rails', '~> 1.1'
 gem 'jruby-openssl', :platform => :jruby
 gem 'json', '~> 1.7'
+gem "jsrender-rails", "~> 1.2"
 gem 'launchy', '~> 2.1', :group => [:test, :development]
 gem 'meta_request', :group => :development
 gem 'mini_magick', '~> 3.4'

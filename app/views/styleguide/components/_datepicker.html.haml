@@ -1,0 +1,8 @@
+.row.max-width-m.margin-bottom-m
+  %label
+    %input#datepicker.min-width-full.has-add-on{:type => :text}
+    .input-add-on
+      %i.icon-calendar
+
+:coffeescript
+  jQuery -> $("#datepicker").datepicker()

@@ -4,13 +4,11 @@
 
 .inline-tab-item
   @extend .navigation-tab-item
-  background: white
-  border-bottom: 1px solid $lightergrey !important
+  background: none
   @include box-shadow(none !important)
 
   &.active
     border-bottom: 1px solid white !important
-    padding-bottom: 1px
     cursor: default
 
   &:not(.active)

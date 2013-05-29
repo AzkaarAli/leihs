@@ -37,27 +37,36 @@
 
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next
   position: absolute
-  top: 2px
-  width: 1.8em
-  height: 1.8em
+  top: 0
+  width: 2.4em
+  height: 100%
   @extend .button.white
   cursor: pointer
-  @include border-radius(4px)
+  @include box-sizing(border-box)
 
   span
-    margin: 6px 7px
+    margin: 0 auto
+    top: 12px
+    text-indent: 999em
+    display: block
 
 .ui-datepicker .ui-datepicker-prev span
   @extend .arrow.left
+  top: 9px
+  @include change-all-arrow-colors(rgba(0,0,0,0.5))
 
 .ui-datepicker .ui-datepicker-next span
   @extend .arrow.right
+  top: 10px
+  @include change-all-arrow-colors(rgba(0,0,0,0.5))
 
-.ui-datepicker .ui-datepicker-prev 
-  left: 2px
+.ui-datepicker .ui-datepicker-prev
+  left: 0
+  @include border-left-radius(4px)
 
 .ui-datepicker .ui-datepicker-next 
-  right: 2px
+  right: 0
+  @include border-right-radius(4px)
 
 .ui-datepicker .ui-datepicker-title  
   color: $almostwhite

@@ -8,10 +8,12 @@
 #= require jquery
 #= require jquery-ui
 #= require jquery_ujs
+#= require jsrender
 #= require bootstrap/bootstrap-modal
 #= require tooltipster/tooltipster
 #
 ##### LIB
 #
-#= require_tree ./_NEW/application/lib
+#= require_tree ./_NEW/lib
+#= require_tree ./_NEW/views
 #

@@ -39,6 +39,7 @@ class App.Tooltip
 
 window.App.Tooltip = App.Tooltip
 
-jQuery -> $(document).on "mouseenter", ".tooltip", -> new App.Tooltip
-   el: $(this)
-   content: App.render("tooltips/default", {content: $(this).attr("title")})
+jQuery -> $(document).on "mouseenter", ".tooltip[title]", (e)-> 
+   new App.Tooltip
+      el: $(this)
+      content: App.Render("tooltips/default", {content: $(this).attr("title")})

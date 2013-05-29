@@ -1,4 +1,4 @@
-%nav#topbar
+%nav.topbar
   
   %a.topbar-logo.padding-horizontal-s{:href => borrow_start_path} leihs
 
@@ -8,18 +8,18 @@
       = render :partial => 'topbar_search'
     
     %li.topbar-item.separated-left{:class => true ? "active" : nil}
-      = link_to _("Borrow"), "", :class => "anchor"
+      %a.topbar-item-inner= _("Borrow")
 
     %li.topbar-item.separated-left{:class => false ? "active" : nil}
-      = link_to _("Manage"), backend_path, :class => "anchor"
+      %a.topbar-item-inner{:href => backend_path}= _("Manage")
 
     %li.topbar-item.separated-left{:class => false ? "active" : nil}
-      = link_to _("Inventory Pools"), "", :class => "anchor"
+      %a.topbar-item-inner{:href => backend_path}= _("Inventory Pools")
     
     = render :partial => "application/languages"
 
     %li.topbar-item.dropdown-holder.separated-left{:class => current_page?("current_user") ? "active" : nil}
-      %a
+      %a.topbar-item-inner{}
         = current_user
         %i.arrow.down
 

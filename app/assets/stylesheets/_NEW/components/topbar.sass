@@ -1,4 +1,4 @@
-#topbar
+.topbar
   background: $almostwhite
   border: 1px solid $lightergrey
   border-top: 1px solid lighten($lightergrey, 5%)
@@ -43,28 +43,28 @@ a.topbar-logo, a.topbar-logo:hover
   .arrow
     @include change-all-arrow-colors($grey)
   
-  & > a
-    color: $grey
-    display: block
-    font-weight: bold
-    font-size: 1.2em
-    line-height: 3.5em
-    height: 100%
-    padding: 0 16px
-    @include text-shadow (0 0 1px rgba(255,255,255,0.4))
+.topbar-item-inner
+  color: $grey
+  display: block
+  font-weight: bold
+  font-size: 1.2em
+  line-height: 3.5em
+  height: 100%
+  padding: 0 16px
+  @include text-shadow (0 0 1px rgba(255,255,255,0.4))
 
 .topbar-item.active, .topbar-item:hover 
   background: none
   @include box-shadow(none)
 
-  & > a
+  .topbar-item-inner
     color: $darkergrey
     @include text-shadow (1px 1px 1px white)
 
   .arrow
     @include change-all-arrow-colors($darkergrey)
 
-#topbar.dark
+.topbar.dark
   background: $grey
   @include background(linear-gradient(top, lighten($grey, 5%) 50%, $grey 50%))
   @include border-radius($border-radius-s)
@@ -75,7 +75,7 @@ a.topbar-logo, a.topbar-logo:hover
     color: white
     @include text-shadow (1px 1px 0 rgba(0,0,0,0.5))
 
-  .topbar-item > a
+  .topbar-item .topbar-item-inner
     color: rgba(255,255,255,0.8)
     @include text-shadow (1px 1px 0 rgba(0,0,0,0.3))
 
@@ -85,7 +85,7 @@ a.topbar-logo, a.topbar-logo:hover
   .topbar-item.active, .topbar-item:hover
     background: rgba(255,255,255,0.3)
 
-    & > a
+    .topbar-item-inner
       color: white
       @include text-shadow (1px 1px 0 rgba(0,0,0,0.5))
       
