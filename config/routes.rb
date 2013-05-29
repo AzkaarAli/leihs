@@ -26,6 +26,10 @@ Leihs::Application.routes.draw do
     get "/", :to => "application#start", :as => "start"
   end
 
+  # Styleguide
+  get "/styleguide", :to => "styleguide#show"
+  get "/styleguide/*all", :to => "styleguide#show"
+
 ############################################################################
 ##### Following things are old and have to be checked if still used
 #####

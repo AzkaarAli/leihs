@@ -4,8 +4,8 @@
 
   %ul.topbar-navigation
 
-    %li.topbar-item.topbar-search.separated-left{:class => current_page?("search") ? "active" : nil}
-      = render :partial => 'search'
+    %li#topbar-search.topbar-item.topbar-search.separated-left{:class => current_page?("search") ? "active" : nil}
+      = render :partial => 'topbar_search'
     
     %li.topbar-item.separated-left{:class => true ? "active" : nil}
       = link_to _("Borrow"), "", :class => "anchor"
@@ -27,3 +27,8 @@
       
         %li
           %a.dropdown-item{:href => logout_path}= _("Logout")
+
+:coffeescript
+  
+  jQuery -> new Libraries.TopBarSearchItem
+    el: $("#topbar-search")

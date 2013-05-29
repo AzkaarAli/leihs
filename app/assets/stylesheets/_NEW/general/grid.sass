@@ -14,10 +14,12 @@
 .col1of8, .col2of8, .col3of8, .col4of8, .col5of8, .col6of8, .col7of8,
 .col1of10, .col2of10, .col3of10, .col4of10, .col5of10, .col6of10, .col7of10, .col8of10, .col9of10,
   float: left
+  @include box-sizing(border-box)
 
 .col1of1 
   float: none
   width: 100%
+  @include box-sizing(border-box)
 
 .col1of2 
   width: 50%
