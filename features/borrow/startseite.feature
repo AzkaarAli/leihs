@@ -20,7 +20,3 @@ Funktionalität: Startseite
     Dann seh ich die Kinder dieser Hauptkategorie
     Wenn ich eines dieser Kinder anwählen
     Dann lande ich in der Modellliste für diese Kategorie
-
-
-
-
