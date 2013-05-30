@@ -24,6 +24,7 @@ Leihs::Application.routes.draw do
   # Borrow Section
   namespace :borrow do
     get "/", :to => "application#start", :as => "start"
+    get "models", :to => "models#index", :as => "models"
   end
 
   # Categories
@@ -70,12 +71,6 @@ Leihs::Application.routes.draw do
 
   resource :authenticator do
     match 'login', :to => "authenticator/database_authentication#login"
-  end
-
-  resources :models, :except => :index do
-    member do
-      get :chart
-    end
   end
 
   resources :categories do 
