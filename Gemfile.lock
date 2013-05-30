@@ -10,6 +10,14 @@ GIT
   specs:
     will_paginate (3.0.2)
 
+GIT
+  remote: https://github.com/spape/jsrender-rails.git
+  revision: 7be615d7372c6bb705d43b10a405e59e7a145b98
+  branch: own_template_prefix
+  specs:
+    jsrender-rails (1.2)
+      rails (>= 3.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -163,8 +171,6 @@ GEM
     jruby-rack (1.1.13.2)
     json (1.7.7)
     json (1.7.7-java)
-    jsrender-rails (1.2)
-      rails (>= 3.1.0)
     launchy (2.3.0)
       addressable (~> 2.3)
     libv8 (3.11.8.17)
@@ -359,7 +365,7 @@ DEPENDENCIES
   jquery-tmpl-rails (~> 1.1)
   jruby-openssl
   json (~> 1.7)
-  jsrender-rails (~> 1.2)
+  jsrender-rails (~> 1.2)!
   launchy (~> 2.1)
   meta_request
   mini_magick (~> 3.4)

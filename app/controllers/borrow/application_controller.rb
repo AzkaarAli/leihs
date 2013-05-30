@@ -7,6 +7,7 @@ class Borrow::ApplicationController < ApplicationController
   end
 
   def start
+    @categories = (current_user.all_categories & Category.roots).sort
   end
 
 end

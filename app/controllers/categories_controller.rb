@@ -6,5 +6,10 @@ class CategoriesController < FrontendController
     render :template => "users/show", :layout => "frontend_2010" unless @missing_fields.empty?
   end
 
+  def image
+    category = Category.find params[:id]
+    redirect_to category.image
+  end
+
 end
   

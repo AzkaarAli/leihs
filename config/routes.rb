@@ -3,32 +3,35 @@ Leihs::Application.routes.draw do
   root :to => "application#index"
 
   # Authenticator
-  match '/authenticator/zhdk/login', :to => 'authenticator/zhdk#login'
-  match '/authenticator/zhdk/login_successful/:id', :to => 'authenticator/zhdk#login_successful'
-  match '/authenticator/db/:action', :to => 'authenticator/database_authentication'
-  match '/authenticator/ldap/:action', :to => 'authenticator/ldap_authentication'
-  match '/authenticator/hslu/:action', :to => 'authenticator/hslu_authentication'
-  match '/authenticator/shibboleth/:action/:id', :to => 'authenticator/shibboleth_authentication'
+  match 'authenticator/zhdk/login', :to => 'authenticator/zhdk#login'
+  match 'authenticator/zhdk/login_successful/:id', :to => 'authenticator/zhdk#login_successful'
+  match 'authenticator/db/:action', :to => 'authenticator/database_authentication'
+  match 'authenticator/ldap/:action', :to => 'authenticator/ldap_authentication'
+  match 'authenticator/hslu/:action', :to => 'authenticator/hslu_authentication'
+  match 'authenticator/shibboleth/:action/:id', :to => 'authenticator/shibboleth_authentication'
 
   # For RESTful_Authentication
-  match '/activate/:activation_code', :to => 'users#activate', :activation_code => nil
-  match '/signup', :to => 'users#new'
-  match '/login', :to => 'sessions#new'
-  match '/logout', :to => 'sessions#destroy'
-  match '/switch_to_ldap', :to => 'sessions#switch_to_ldap' #TODO 1009: Remove when not used anymore
+  match 'activate/:activation_code', :to => 'users#activate', :activation_code => nil
+  match 'signup', :to => 'users#new'
+  match 'login', :to => 'sessions#new'
+  match 'logout', :to => 'sessions#destroy'
+  match 'switch_to_ldap', :to => 'sessions#switch_to_ldap' #TODO 1009: Remove when not used anymore
   
   # Backend
-  match '/backend', :to => "backend/backend#index"
-  get '/backend/inventory_pools/:inventory_pool_id/inventory', :to => "backend/inventory#index", :as => "backend_inventory_pool_inventory"
+  match 'backend', :to => "backend/backend#index"
+  get 'backend/inventory_pools/:inventory_pool_id/inventory', :to => "backend/inventory#index", :as => "backend_inventory_pool_inventory"
 
   # Borrow Section
   namespace :borrow do
     get "/", :to => "application#start", :as => "start"
   end
 
+  # Categories
+  get "categories/:id/image", :to => "categories#image", :as => "category_image"
+
   # Styleguide
-  get "/styleguide", :to => "styleguide#show"
-  get "/styleguide/:section", :to => "styleguide#show"
+  get "styleguide", :to => "styleguide#show"
+  get "styleguide/:section", :to => "styleguide#show"
 
 ############################################################################
 ##### Following things are old and have to be checked if still used

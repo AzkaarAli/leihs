@@ -13,6 +13,8 @@
     = yield :head
 
   %body
+
+    = render :partial => "flash", :locals => {:flash => flash} if flash
   
     %header.wrapper.padding-top-m= render :partial => "borrow/topbar"
 

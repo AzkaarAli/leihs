@@ -5,7 +5,15 @@
   .col4of5
     = render :partial => 'borrow/tabs', :locals => {:navigation => "lending", :current_page => "daily"}
 
-    #daily-view
-      .content-wrapper.straight-top-left
+    .row.content-wrapper.straight-top-left.padding-inset-s
+      .row.emboss
+        - @categories.each_with_index do |category, i|
+          .col1of3.padding-inset-m.text-align-center
+            %a.row.emboss.white.padding-inset-s
+              .min-height-s
+                %img.max-width.max-height-s{:src => category_image_path(category.id)}
+              .row.padding-top-m
+                %h2.headline-m.text-align-center.text-ellipsis.max-width-xs= category
+                        
 
   .col1of5= render :partial => "borrow/order"
