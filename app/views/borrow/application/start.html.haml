@@ -9,7 +9,7 @@
       .row.emboss
         - @categories.each_with_index do |category, i|
           .col1of3.padding-inset-m.text-align-center
-            %a.row.emboss.white.padding-inset-s.focus-hover.unselectable{:title => category, :link => models_path(:category_id => category.id)}
+            %a.row.emboss.white.padding-inset-s.focus-hover.unselectable{:title => category, :href => models_path(:category_id => category.id)}
               .min-height-s
                 %img.max-width.max-height-s{:src => category_image_path(category.id)}
               .row.padding-top-m
