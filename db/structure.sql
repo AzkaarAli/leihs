@@ -15,7 +15,7 @@ CREATE TABLE `access_rights` (
   KEY `index_access_rights_on_suspended_until` (`suspended_until`),
   KEY `index_access_rights_on_deleted_at` (`deleted_at`),
   KEY `index_on_user_id_and_inventory_pool_id_and_deleted_at` (`user_id`,`inventory_pool_id`,`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=25108 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=25118 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `accessories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -118,7 +118,7 @@ CREATE TABLE `backup_orders` (
   KEY `index_backup_orders_on_order_id` (`order_id`),
   KEY `index_backup_orders_on_user_id` (`user_id`),
   KEY `index_backup_orders_on_inventory_pool_id` (`inventory_pool_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9156 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=9162 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `buildings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -163,7 +163,7 @@ CREATE TABLE `contract_lines` (
   KEY `index_contract_lines_on_model_id` (`model_id`),
   KEY `index_contract_lines_on_returned_date_and_contract_id` (`returned_date`,`contract_id`),
   KEY `index_contract_lines_on_type_and_contract_id` (`type`,`contract_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=230292 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=230564 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `contracts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -181,7 +181,7 @@ CREATE TABLE `contracts` (
   KEY `index_contracts_on_user_id` (`user_id`),
   KEY `index_contracts_on_inventory_pool_id` (`inventory_pool_id`),
   KEY `index_contracts_on_delta` (`delta`)
-) ENGINE=InnoDB AUTO_INCREMENT=50888 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=51004 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `database_authentications` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -225,7 +225,7 @@ CREATE TABLE `histories` (
   KEY `index_histories_on_user_id` (`user_id`),
   KEY `index_histories_on_target_type_and_target_id` (`target_type`,`target_id`),
   KEY `index_histories_on_type_const` (`type_const`)
-) ENGINE=InnoDB AUTO_INCREMENT=727648 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=728614 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `holidays` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -323,7 +323,7 @@ CREATE TABLE `items` (
   KEY `index_items_on_delta` (`delta`),
   KEY `index_items_on_parent_id_and_retired` (`parent_id`,`retired`),
   KEY `index_items_on_model_id_and_retired_and_inventory_pool_id` (`model_id`,`retired`,`inventory_pool_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20200 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=20202 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `items_backup` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -468,7 +468,7 @@ CREATE TABLE `notifications` (
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_notifications_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=180892 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=181144 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `numerators` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -486,7 +486,7 @@ CREATE TABLE `options` (
   PRIMARY KEY (`id`),
   KEY `index_options_on_inventory_pool_id` (`inventory_pool_id`),
   KEY `index_options_on_delta` (`delta`)
-) ENGINE=InnoDB AUTO_INCREMENT=2354 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=2374 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `order_lines` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -506,7 +506,7 @@ CREATE TABLE `order_lines` (
   KEY `index_order_lines_on_start_date` (`start_date`),
   KEY `index_order_lines_on_end_date` (`end_date`),
   KEY `index_order_lines_on_created_at` (`created_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=214086 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=214216 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -523,7 +523,7 @@ CREATE TABLE `orders` (
   KEY `index_orders_on_delta` (`delta`),
   KEY `index_orders_on_user_id_and_status_const` (`user_id`,`status_const`),
   KEY `index_orders_on_created_at` (`created_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=38786 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=38824 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `partitions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -548,7 +548,7 @@ CREATE TABLE `purposes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=55006 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=55134 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -601,7 +601,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `index_users_on_authentication_system_id` (`authentication_system_id`),
   KEY `index_users_on_delta` (`delta`)
-) ENGINE=InnoDB AUTO_INCREMENT=7804 DEFAULT CHARSET=utf8 CHECKSUM=1;
+) ENGINE=InnoDB AUTO_INCREMENT=7808 DEFAULT CHARSET=utf8 CHECKSUM=1;
 
 CREATE TABLE `workdays` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

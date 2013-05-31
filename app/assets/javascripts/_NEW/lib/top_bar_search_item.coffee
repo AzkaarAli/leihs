@@ -6,7 +6,6 @@ This script provides functionalities for the interactivity with the topbar searc
 
 ###
 
-window.App ?= {}
 class window.App.TopBarSearchItem
 
   constructor: (options)->

@@ -1,6 +1,6 @@
 - content_for :title, _("Borrow")
 
-.wrapper
+.wrapper#start-view
 
   .col4of5
     = render :partial => 'borrow/tabs', :locals => {:navigation => "lending", :current_page => "daily"}
@@ -23,3 +23,8 @@
                     %img.max-width-xxs.max-height-xxs{:src => image_path("loading.gif")}
                     
   .col1of5= render :partial => "borrow/order"
+
+:coffeescript
+  
+  jQuery -> new App.Borrow.StartController
+    el: $("#start-view")

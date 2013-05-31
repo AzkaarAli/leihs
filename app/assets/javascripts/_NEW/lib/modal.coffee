@@ -10,7 +10,6 @@ It also helps autofocusing fields that have the autofocus attribute.
 
 ###
 
-window.App ?= {}
 class window.App.Modal
 
   @all = []

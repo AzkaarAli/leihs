@@ -3,6 +3,8 @@
 # this manifest includes all javascript files that are used in both:
 # the borrow section and the manage section of leihs
 #
+#= require_self
+#
 ##### VENDOR
 #
 #= require jquery
@@ -22,6 +24,11 @@
 ##### LIB
 #
 #= require_tree ./_NEW/lib
+#= require_tree ./_NEW/modules
 #= require_tree ./_NEW/models
 #= require_tree ./_NEW/views
 #
+#####
+
+window.App ?= {}
+window.App.Modules ?= {}

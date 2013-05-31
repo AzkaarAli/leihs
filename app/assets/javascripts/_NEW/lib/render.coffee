@@ -9,7 +9,6 @@ e.g. in the case of changing the render engine.
 
 ###
 
-window.App ?= {}
 class window.App.Render
 
   @defaultPath: "_NEW/views/"

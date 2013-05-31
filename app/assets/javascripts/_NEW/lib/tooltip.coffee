@@ -9,7 +9,6 @@ or create an Tooltip with new App.Tooltio(options).
 
 ###
 
-window.App ?= {}
 class App.Tooltip
 
    constructor: (options)->
