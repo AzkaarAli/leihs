@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: https://github.com/spape/jsrender-rails.git
-  revision: 7be615d7372c6bb705d43b10a405e59e7a145b98
+  revision: 952103bb94511e4ea06f6024f79d02a719430163
   branch: own_template_prefix
   specs:
     jsrender-rails (1.2)

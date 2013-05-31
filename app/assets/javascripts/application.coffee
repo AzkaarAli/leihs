@@ -11,6 +11,7 @@
 #= require jquery-ui
 #= require jquery_ujs
 #= require jsrender
+#= require underscore
 #= require bootstrap/bootstrap-modal
 #= require tooltipster/tooltipster
 #=

@@ -29,6 +29,7 @@ Leihs::Application.routes.draw do
 
   # Categories
   get "categories/:id/image", :to => "categories#image", :as => "category_image"
+  get "category_links", :to => "category_links#index", :as => "category_links"
 
   # Styleguide
   get "styleguide", :to => "styleguide#show"

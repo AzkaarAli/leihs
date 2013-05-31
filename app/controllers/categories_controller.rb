@@ -2,7 +2,11 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = if params[:children]
-      Category.find(params[:category_id]).children
+      if params[:category_id]
+        Category.find(params[:category_id]).children
+      elsif params[:category_ids]
+        Category.find(params[:category_ids]).map(&:children)
+      end
     else
       Category.all
     end
