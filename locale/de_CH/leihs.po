@@ -2080,3 +2080,6 @@ msgid "Return"
 msgid_plural "Returns"
 msgstr[0] "Rückgabe"
 msgstr[1] "Rückgaben"
+
+msgid "order"
+msgstr "bestellen"

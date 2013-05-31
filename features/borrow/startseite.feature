@@ -13,6 +13,7 @@ Funktionalität: Startseite
     Dann sieht man genau die für den User bestimmte Haupt-Kategorien mit Bild und Namen
     Und man sieht die Überschrift "Hauptkategorien"
 
+  @javascript
   Szenario: Haupt-Kategorien aufklappen
     Angenommen persona "Normin" existing
     Und man ist eingeloggt als "Normin"

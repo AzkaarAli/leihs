@@ -19,8 +19,8 @@ Und(/^man sieht die Überschrift "(.*?)"$/) do |arg1|
 end
 
 Wenn(/^ich über eine Hauptkategorie fahre$/) do
-  @first_main_category = @main_categories.first
-  find("data-category_id='#{@first_main_category.id}'").execute_script("$('.dropdown-holder').trigger('mouseover');")
+  @first_main_category = @current_user.categories.select{|c| c.parents.empty?}.first
+  page.execute_script("$('*[data-category_id] .dropdown-holder').trigger('mouseover');")
   step "ensure there are no active requests"
 end
 
@@ -38,5 +38,4 @@ Wenn(/^ich eines dieser Kinder anwähle$/) do
 end
 
 Dann(/^lande ich in der Modellliste für diese Kategorie$/) do
-  
 end
