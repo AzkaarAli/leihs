@@ -27,7 +27,7 @@
       %a.topbar-item-inner{:href => backend_path}= _("Manage")
 
     %li.topbar-item.dropdown-holder.separated-left{:class => current_page?("current_user") ? "active" : nil}
-      %a.topbar-item-inner{}
+      %a.topbar-item-inner.max-width-s-alt.text-ellipsis
         = current_user
         %i.arrow.down
 

@@ -8,7 +8,7 @@ class CategoriesController < FrontendController
 
   def image
     category = Category.find params[:id]
-    redirect_to category.image
+    redirect_to category.image, :status => :moved_permanently
   end
 
 end

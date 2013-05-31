@@ -43,7 +43,7 @@ a.topbar-logo, a.topbar-logo:hover
   .arrow
     @include change-all-arrow-colors($grey)
   
-.topbar-item-inner
+.topbar-item-inner, a.topbar-item-inner
   color: $grey
   display: block
   font-weight: bold
@@ -75,7 +75,7 @@ a.topbar-logo, a.topbar-logo:hover
     color: white
     @include text-shadow (1px 1px 0 rgba(0,0,0,0.5))
 
-  .topbar-item .topbar-item-inner
+  .topbar-item-inner, a.topbar-item-inner
     color: rgba(255,255,255,0.8)
     @include text-shadow (1px 1px 0 rgba(0,0,0,0.3))
 

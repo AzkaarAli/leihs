@@ -39,7 +39,7 @@
     &:last-child .dropdown-item
       @include border-bottom-radius($border-radius-m)
 
-.dropdown-item
+.dropdown-item, a.dropdown-item
   color: transparentize($darkgrey, 0.2)
   display: block
   font-weight: bold
@@ -50,12 +50,12 @@
   @include user-select(none)
 
   &:hover
-    background: rgba(255,255,255,0.9)
-    color: $darkergrey
+    background: rgba(255,255,255,0.5)
+    color: $darkgrey
 
   &:active
     background: white
-    color: $darkgrey
+    color: $darkergrey
     @include text-shadow(none)
 
   &.red
