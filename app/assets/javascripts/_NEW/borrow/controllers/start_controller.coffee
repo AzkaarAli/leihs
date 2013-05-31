@@ -29,7 +29,8 @@ class window.App.Borrow.StartController extends Spine.Controller
       @render _.first(_.first(categories).parents())
 
   renderCategoryLinks: (links)=>
-    console.log "RENDER"
+    if not _.isEmpty(links)
+      @render _.first(links).ascendant()
 
   render: (parent) =>
     parent_el = $ _.find @rootCategoryElements, (el) -> parseInt(el.getAttribute("data-category_id")) == parent.id
