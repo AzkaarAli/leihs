@@ -15,9 +15,9 @@ Funktionalität: Startseite
 
   Szenario: Haupt-Kategorien aufklappen
     Angenommen persona "Normin" existing
-    Und man ist "Normin"
+    Und man ist eingeloggt als "Normin"
     Und man befindet sich auf der Startseite
     Wenn ich über eine Hauptkategorie fahre
-    Dann seh ich die Kinder dieser Hauptkategorie
-    Wenn ich eines dieser Kinder anwählen
+    Dann sehe ich die Kinder dieser Hauptkategorie
+    Wenn ich eines dieser Kinder anwähle
     Dann lande ich in der Modellliste für diese Kategorie
