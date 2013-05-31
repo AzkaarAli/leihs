@@ -2,15 +2,5 @@
   background: white
   border: 1px solid $lightergrey
   border-bottom: 1px solid darken($lightergrey, 10%)
-  min-height: $min-height
-  margin-bottom: $space-xl
   @include border-radius($border-radius-m)
   @include box-shadow (0 2px 8px -1px rgba(0,0,0,0.2))
-
-  &.straight-top
-    @include border-top-radius(0)
-    @include border-bottom-radius($border-radius-m)
-
-  &.straight-top-left
-    @include border-top-left-radius(0)
-    @include border-bottom-radius($border-radius-m)

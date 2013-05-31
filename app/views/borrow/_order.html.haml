@@ -7,5 +7,16 @@
             %i.icon-shopping-cart
             %span.margin-top-s
               = _("Order")
+          %a.navigation-tab-item.margin-right-xxs.padding-horizontal-m.float-left
+            %span.margin-top-s
+              %span.badge 2
 
-  #order.content-wrapper.straight-top-left
+  .row.content-wrapper.straight-top-left.min-height-s
+
+    .padding-inset-s
+      .emboss.padding-inset-xs
+        %p.paragraph-s
+          %strong= _("Nothing selected")
+
+    .row.position-absolute-bottom.padding-inset-s
+      %a.button.large.green.min-width-full{:disabled => current_user.current_order.lines.any? ? nil : :disabled} Bestellen

@@ -2064,3 +2064,16 @@ msgstr "Ausleihen"
 
 msgid "Manage"
 msgstr "Verwalten"
+
+msgid "Nothing selected"
+msgstr "Nichts ausgewählt"
+
+msgid "Collection"
+msgid_plural "Collections"
+msgstr[0] "Abholung"
+msgstr[1] "Abholungen"
+
+msgid "Return"
+msgid_plural "Returns"
+msgstr[0] "Rückgabe"
+msgstr[1] "Rückgaben"

@@ -9,11 +9,17 @@
       .row.emboss
         - @categories.each_with_index do |category, i|
           .col1of3.padding-inset-m.text-align-center
-            %a.row.emboss.white.padding-inset-s.focus-hover.unselectable{:title => category, :href => models_path(:category_id => category.id)}
-              .min-height-s
-                %img.max-width.max-height-s{:src => category_image_path(category.id)}
-              .row.padding-top-m
-                %h2.headline-m.text-align-center.text-ellipsis.max-width-xs= category
-                        
-
+            .row.emboss.white.focus-hover.unselectable{:"data-category_id" => category.id}
+              %a{:title => category, :href => borrow_models_path(:category_id => category.id)}
+                .padding-inset-s
+                  .min-height-s
+                    %img.max-width.max-height-s{:src => category_image_path(category.id)}
+                  .row.padding-top-m
+                    %h2.headline-m.text-align-center.text-ellipsis.max-width-full= category
+              .row.emboss.straight-top.separated-top.dropdown-holder.min-width
+                %span.arrow.down
+                .dropdown.straight-top.full-width
+                  .padding-inset-xs
+                    %img.max-width-xxs.max-height-xxs{:src => image_path("loading.gif")}
+                    
   .col1of5= render :partial => "borrow/order"

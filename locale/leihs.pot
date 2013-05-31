@@ -1998,3 +1998,16 @@ msgstr ""
 
 msgid "Manage"
 msgstr ""
+
+msgid "Nothing selected"
+msgstr ""
+
+msgid "Collection"
+msgid_plural "Collections"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Return"
+msgid_plural "Returns"
+msgstr[0] ""
+msgstr[1] ""

@@ -1,19 +1,19 @@
 .emboss
   background: rgba(150,150,150,0.1)
   border: 1px solid rgba(0,0,0,0)
-  @include box-shadow(white 1px 1px 0)
   @include text-shadow(1px 1px 0 rgba(255,255,255,0.3))
-  &:not(.straight)
-    @include border-radius(4px)
+  @include border-radius(4px)
 
   &.white
     background: white
     border: 1px solid $lightergrey
+    @include box-shadow(white 1px 1px 0)
 
   &.red, &.error
     background: $red
     color: white
     @include text-shadow(1px 1px 0 rgba(0,0,0,0.2))
+    @include box-shadow(white 1px 1px 0)
 
   &.deep
     border-top: 1px solid $lightgrey
@@ -24,10 +24,12 @@
 
   &.blue, &.notice
     color: white
-    @include text-shadow(1px 1px 0 rgba(0,0,0,0.2))
     background: $lightblue
+    @include text-shadow(1px 1px 0 rgba(0,0,0,0.2))
+    @include box-shadow(white 1px 1px 0)
 
   &.green, &.success
     background: $green
     color: black
     @include text-shadow(1px 1px 0 rgba(255,255,255,0.5))
+    @include box-shadow(white 1px 1px 0)

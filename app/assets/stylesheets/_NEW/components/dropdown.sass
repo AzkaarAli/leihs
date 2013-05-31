@@ -14,18 +14,19 @@
   font-size: $font-size-xs
   font-weight: normal
   line-height: 1.5em
-  max-width: 350px
-  min-width: 160px
   position: absolute
+  left: -1px
   top: 100%
   z-index: 999
   @include border-radius($border-radius-m)
-  @include box-sizing(border-box)
   @include box-shadow($default-box-shadow)
 
-  &.straight-top
-    @include border-top-radius(0)
-    @include border-bottom-radius($border-radius-m)
+  &:not(.full-width)
+    max-width: 350px
+    min-width: 160px
+
+  &.full-width
+    width: 100%
 
   &.right
     left: auto

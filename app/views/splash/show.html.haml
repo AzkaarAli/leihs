@@ -1,6 +1,6 @@
 .wrapper.splashscreen-view
 
-  .content-wrapper.margin-top-l.row
+  .content-wrapper.margin-top-l.row.margin-bottom-l
 
     .row.margin-top-s
 
@@ -12,7 +12,8 @@
           %p.headline-m.padding-top-m.light.text-shadow-white= _("Manage inventory, place reservations on items and pick them up")
 
       .col2of5
-        .row.text-align-right.margin-top-xl.padding-right-l
-          %a.button.large.green.margin-right-xl{:href => login_path}= _("Login")
 
-    %img.splashscreen-image.margin-right.margin-bottom-m{:src => image_path("leihs.png"), :style => "height: 397px; position: relative; float: right; width: 814px;"}
+        .padding-inset-l.text-align-right
+          %a.button.large.green{:href => login_path}= _("Login")
+          
+    %img.splashscreen-image.margin-right-l.margin-bottom-m{:src => image_path("leihs.png"), :style => "height: 397px; position: relative; float: right; width: 814px;"}

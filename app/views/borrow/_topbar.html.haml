@@ -10,13 +10,21 @@
     %li.topbar-item.separated-left{:class => true ? "active" : nil}
       %a.topbar-item-inner= _("Borrow")
 
-    %li.topbar-item.separated-left{:class => false ? "active" : nil}
-      %a.topbar-item-inner{:href => backend_path}= _("Manage")
+    %li.topbar-item.separated-left
+      %a.topbar-item-inner
+        %span.badge 1
+        = _("Collection")
+
+    %li.topbar-item.separated-left
+      %a.topbar-item-inner
+        %span.badge 5
+        = _("Returns")
 
     %li.topbar-item.separated-left{:class => false ? "active" : nil}
       %a.topbar-item-inner{:href => backend_path}= _("Inventory Pools")
-    
-    = render :partial => "application/languages"
+
+    %li.topbar-item.separated-left{:class => false ? "active" : nil}
+      %a.topbar-item-inner{:href => backend_path}= _("Manage")
 
     %li.topbar-item.dropdown-holder.separated-left{:class => current_page?("current_user") ? "active" : nil}
       %a.topbar-item-inner{}
@@ -26,7 +34,9 @@
       %ul.dropdown.right.straight-top
       
         %li
-          %a.dropdown-item{:href => logout_path}= _("Logout")
+          %a.dropdown-item{:href => logout_path}
+            .icon-signout
+            = _("Logout")
 
 :coffeescript
   

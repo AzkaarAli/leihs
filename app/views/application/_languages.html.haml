@@ -2,11 +2,11 @@
   active_language = Language.find_by_locale_name(I18n.locale)
   align_right ||= nil
 
-%li.topbar-item.separated-left.dropdown-holder
-  .topbar-item-inner
-    = active_language.name
-    %i.arrow.down
-  %ul.dropdown.straight-top{:class => align_right.nil? ? "" : "right"}
-    - (Language.active_languages - [active_language]).each do |l|
-      %li
-        %a.dropdown-item{:href => "?locale=#{l.locale_name}"}= l.name
+%ul.row.text-align-center
+  - Language.active_languages.each do |language|
+    %li.inline
+      - if language == active_language
+        %a.grey.padding-inset-xs{:href => ""}
+          %strong= language.name
+      - else
+        %a.grey.padding-inset-xs{:href => "?locale=#{language.locale_name}"}= language.name
