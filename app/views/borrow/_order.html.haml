@@ -19,4 +19,4 @@
           %strong= _("Nothing selected")
 
     .row.position-absolute-bottom.padding-inset-s
-      %a.button.green.min-width-full{:disabled => current_user.current_order.lines.any? ? nil : :disabled} Bestellen
+      -#%a.button.large.green.min-width-full{:disabled => current_user.current_order.lines.any? ? nil : :disabled} Bestellen

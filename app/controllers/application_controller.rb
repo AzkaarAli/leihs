@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
       if current_user.has_role?('manager', nil, false)
         redirect_to backend_path
       else
-        redirect_to categories_path
+        redirect_to borrow_start_path
       end
     else
       render "splash/show"
