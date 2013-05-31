@@ -10,11 +10,11 @@
         - @categories.each_with_index do |category, i|
           .col1of3.padding-inset-m.text-align-center
             .row.emboss.white.focus-hover.unselectable{:"data-category_id" => category.id}
-              %a{:title => category, :href => borrow_models_path(:category_id => category.id)}
+              %a{:href => borrow_models_path(:category_id => category.id)}
                 .padding-inset-s
                   .min-height-s
                     %img.max-width.max-height-s{:src => category_image_path(category.id)}
-                  .row.padding-top-m
+                  .row.padding-top-m{:title => category}
                     %h2.headline-m.text-align-center.text-ellipsis.max-width-full= category
               - if category.children.any?
                 .row.emboss.straight-top.separated-top.dropdown-holder.min-width

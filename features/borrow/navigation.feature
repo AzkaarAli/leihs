@@ -7,17 +7,17 @@ Funktionalität: Navigation
   Navigationsmöglichkeiten haben
 
   Szenario: Navigation für Ausleihenden
-    Angenommen ich bin "Normin"
+    Angenommen ich bin Normin
     Dann seh ich die Navigation auf jeder Seite
-    Und die Navigation beinhaltet Geräteparks, Benutzer, Sprachauswahl und Logout
+    Und die Navigation beinhaltet Geräteparks, Benutzer und Logout
 
   Szenario: Navigation für Manager
-    Angenommen ich bin "Pius"
+    Angenommen ich bin Pius
     Dann seh ich die Navigation auf jeder Seite
-    Und die Navigation beinhaltet Backend, Geräteparks, Benutzer, Sprachauswahl und Logout
+    Und die Navigation beinhaltet Backend, Geräteparks, Benutzer und Logout
 
   Szenario: Home-Button
-    Angenommen ich bin "Normin"
+    Angenommen ich bin Normin
     Dann seh ich in der Navigation den Home-Button
     Wenn ich den Home-Button bediene
     Dann lande ich auf der Seite der Hauptkategorien

@@ -40,7 +40,7 @@
       @include border-bottom-radius($border-radius-m)
 
 .dropdown-item, a.dropdown-item
-  color: transparentize($darkgrey, 0.2)
+  color: $darkgrey
   display: block
   font-weight: bold
   padding: 6px $space-xs
@@ -51,11 +51,11 @@
 
   &:hover
     background: rgba(255,255,255,0.5)
-    color: $darkgrey
+    color: $darkergrey
 
   &:active
     background: white
-    color: $darkergrey
+    color: $darkgrey
     @include text-shadow(none)
 
   &.red
