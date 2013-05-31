@@ -2062,6 +2062,9 @@ msgstr "Schliessungstag"
 msgid "Borrow"
 msgstr "Ausleihen"
 
+msgid "Overview"
+msgstr "Übersicht"
+
 msgid "Manage"
 msgstr "Verwalten"
 

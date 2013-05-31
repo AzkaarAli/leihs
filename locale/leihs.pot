@@ -1996,6 +1996,9 @@ msgstr ""
 msgid "Borrow"
 msgstr ""
 
+msgid "Overview"
+msgstr ""
+
 msgid "Manage"
 msgstr ""
 
