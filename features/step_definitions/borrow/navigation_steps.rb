@@ -1,25 +1,25 @@
 # encoding: utf-8
 
 Dann(/^seh ich die Navigation auf jeder Seite$/) do
-  binding.pry
+  pending
 end
 
 Dann(/^die Navigation beinhaltet Geräteparks, Benutzer und Logout$/) do
-  binding.pry
+  pending
 end
 
 Dann(/^die Navigation beinhaltet Backend, Geräteparks, Benutzer und Logout$/) do
-  binding.pry
+  pending
 end
 
 Dann(/^seh ich in der Navigation den Home\-Button$/) do
-  binding.pry
+  pending
 end
 
 Wenn(/^ich den Home\-Button bediene$/) do
-  binding.pry
+  pending
 end
 
 Dann(/^lande ich auf der Seite der Hauptkategorien$/) do
-  binding.pry
+  pending
 end
