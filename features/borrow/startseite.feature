@@ -7,17 +7,15 @@ Funktionalität: Startseite
   einen Einstieg/Übersicht über das ausleihbare Inventar
 
   Szenario: Startseite
-    Angenommen persona "Normin" existing
-    Und man ist eingeloggt als "Normin"
-    Und man befindet sich auf der Startseite
+    Angenommen man ist "Normin"
+    Und man befindet sich auf der Seite der Hauptkategorien
     Dann sieht man genau die für den User bestimmte Haupt-Kategorien mit Bild und Namen
     Und man sieht die Überschrift "Hauptkategorien"
 
   @javascript
   Szenario: Haupt-Kategorien aufklappen
-    Angenommen persona "Normin" existing
-    Und man ist eingeloggt als "Normin"
-    Und man befindet sich auf der Startseite
+    Angenommen man ist "Normin"
+    Und man befindet sich auf der Seite der Hauptkategorien
     Wenn ich über eine Hauptkategorie mit Kindern fahre
     Dann sehe ich die Kinder dieser Hauptkategorie
     Wenn ich eines dieser Kinder anwähle

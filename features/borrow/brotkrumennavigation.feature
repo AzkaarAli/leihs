@@ -7,13 +7,13 @@ Funktionalität: Brotkrumennavigation
   die möglichkeit haben schnell von A nach Z zu kommen
 
   Szenario: Brotkrumennavigation
-    Angenommen persona "Normin" existing
-    Und man ist eingeloggt als "Normin"
+    Angenommen man ist "Normin"
+    Und man befindet sich auf der Seite der Hauptkategorien
     Dann sehe ich die Brotkrumennavigation
 
   Szenario: Home-Button der Brotkrumennavigation
-    Angenommen persona "Normin" existing
-    Und man ist eingeloggt als "Normin"
+    Angenommen man ist "Normin"
+    Und man befindet sich auf der Seite der Hauptkategorien
     Und ich sehe die Brotkrumennavigation
     Dann beinhaltet diese immer an erster Stelle das Übersichtsbutton
     Und dieser führt mich immer zur Seite der Hauptkategorien

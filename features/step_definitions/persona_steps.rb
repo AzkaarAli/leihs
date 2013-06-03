@@ -8,7 +8,7 @@ end
 
 Given /^I am "([^"]*)"$/ do |persona_name|
   step 'persona "%s" existing' % persona_name
-  step "I am logged in as '%s' with password 'password'" % persona_name.downcase
+  step 'man ist eingeloggt als "%s"' % persona_name
 end
 
 Angenommen /^man ist "([^"]*)"$/ do |persona_name|

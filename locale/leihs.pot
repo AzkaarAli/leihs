@@ -2092,3 +2092,6 @@ msgstr ""
 
 msgid "Order Overview"
 msgstr ""
+
+msgid "To pick up"
+msgstr ""

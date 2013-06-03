@@ -1,7 +1,9 @@
 class Borrow::OrdersController < Borrow::ApplicationController
 
-  def unsubmitted_order
-    
+  def index
+  end
+
+  def unsubmitted_order    
   end
 
 end

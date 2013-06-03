@@ -1,28 +1,38 @@
 # encoding: utf-8
 
-Dann(/^seh ich die Navigation auf jeder Seite$/) do
+Dann(/^seh ich die Navigation$/) do
   find("nav")
 end
 
-Dann(/^die Navigation beinhaltet Ausleihen, Geräteparks, Benutzer und Logout$/) do
-  find("nav [href='#{borrow_inventory_pools_path}']", :text => _("InventoryPools"))
-  find("nav [href='#{borrow_user_path}']", :text => @current_user.name)
-  find("nav [href='#{logout_path}']", :text => _("Logout"), :visible => false)
-end
-
-Dann(/^die Navigation beinhaltet Backend, Geräteparks, Benutzer und Logout$/) do
-  step 'die Navigation beinhaltet Geräteparks, Benutzer und Logout'
-  binding.pry
+Dann(/^die Navigation beinhaltet "(.*?)"$/) do |section|
+  case section
+    when "Abzuholen"
+      find("nav a[href='#{borrow_to_pick_up_path}']", :text => _("To pick up"))
+    when "Rückgaben"
+      find("nav a[href='#{borrow_returns_path}']", :text => _("Returns"))
+    when "Bestellungen"
+      find("nav a[href='#{borrow_orders_path}']", :text => _("Orders"))
+    when "Geräteparks"
+      find("nav a[href='#{borrow_inventory_pools_path}']", :text => _("Inventory Pools"))
+    when "Benutzer"
+      find("nav a[href='#{borrow_current_user_path}']", :text => @current_user.name)
+    when "Logout"
+      find("nav a[href='#{logout_path}']")
+    when "Verwalten"
+      find("nav a[href='#{backend_path}']", :text => _("Manage"))
+    else
+      pending
+  end
 end
 
 Dann(/^seh ich in der Navigation den Home\-Button$/) do
-  binding.pry
+  find("nav a[href='#{borrow_start_path}']")
 end
 
 Wenn(/^ich den Home\-Button bediene$/) do
-  pending
+  find("nav a[href='#{borrow_start_path}']").click
 end
 
 Dann(/^lande ich auf der Seite der Hauptkategorien$/) do
-  pending
+  current_path.should == borrow_start_path
 end

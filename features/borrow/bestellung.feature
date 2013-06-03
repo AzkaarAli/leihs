@@ -7,13 +7,11 @@ Funktionalität: Bestellung
   die möglichkeit haben Modelle zu bestellen
 
   Szenario: Bestellfensterchen
-    Angenommen persona "Normin" existing
-    Und man ist eingeloggt als "Normin"
-    Und man befindet sich auf der Startseite
+    Angenommen man ist "Normin"
+    Und man befindet sich auf der Seite der Hauptkategorien
     Dann sehe ich das Bestellfensterchen
 
   Szenario: Kein Bestellfensterchen
-    Angenommen persona "Normin" existing
-    Und man ist eingeloggt als "Normin"
+    Angenommen man ist "Normin"
     Und man befindet sich auf der Bestellübersicht
     Dann sehe ich kein Bestellfensterchen

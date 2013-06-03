@@ -7,6 +7,6 @@ Funktionalität: Suche
   eine Suchfunktionalität
 
   Szenario: Suchfeld
-    Angenommen persona "Normin" existing
-    Und man ist eingeloggt als "Normin"
+    Angenommen man ist "Normin"
+    Und man befindet sich auf der Seite der Hauptkategorien
     Dann sieht man die Suche

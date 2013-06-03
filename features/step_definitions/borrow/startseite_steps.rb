@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-Und(/^man befindet sich auf der Startseite$/) do
+Und(/^man befindet sich auf der Seite der Hauptkategorien$/) do
   visit borrow_start_path
 end
 
