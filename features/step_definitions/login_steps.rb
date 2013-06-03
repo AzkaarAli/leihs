@@ -39,6 +39,7 @@ end
 
 # This one 'really' goes through the auth process
 When /^I log in as '([^']*)' with password '([^']*)'$/ do |username, password|
+  binding.pry
   post "/authenticator/db/login", {:login => {:username => username, :password => password}}
 end
 
@@ -70,4 +71,13 @@ When /^"([^"]*)" sign in successfully he is redirected to the "([^"]*)" section$
   find(".login .button").click
   page.has_css?("#main.wrapper", :visible => true)
   find(".navigation .active.#{section_name.downcase}")
+end
+
+Angenommen(/^man ist eingeloggt als "(.*?)"$/) do |persona|
+  @current_user = User.where(:login => persona.downcase).first
+  visit root_path
+  find("a[href='#{login_path}']").click
+  fill_in 'username', :with => persona.downcase
+  fill_in 'password', :with => 'password'
+  find("[type='submit']").click
 end
