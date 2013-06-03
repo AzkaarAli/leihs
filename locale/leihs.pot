@@ -2038,7 +2038,6 @@ msgid "Return"
 msgid_plural "Returns"
 msgstr[0] ""
 msgstr[1] ""
-<<<<<<< HEAD
 
 msgid "not yet saved"
 msgstr ""
@@ -2090,5 +2089,3 @@ msgstr ""
 
 msgid "%s saved"
 msgstr ""
-=======
->>>>>>> a74941b20854e1f475f814fadf28d31cca93105c

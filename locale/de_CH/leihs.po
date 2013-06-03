@@ -2105,7 +2105,6 @@ msgid_plural "Returns"
 msgstr[0] "Rückgabe"
 msgstr[1] "Rückgaben"
 
-<<<<<<< HEAD
 msgid "not yet saved"
 msgstr "noch nicht gespeichert"
 
@@ -2156,7 +2155,6 @@ msgstr "Name der Gruppe"
 
 msgid "%s saved"
 msgstr "%s gespeichert"
-=======
+
 msgid "order"
 msgstr "bestellen"
->>>>>>> a74941b20854e1f475f814fadf28d31cca93105c
