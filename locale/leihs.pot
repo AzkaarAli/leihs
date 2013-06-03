@@ -2089,3 +2089,6 @@ msgstr ""
 
 msgid "%s saved"
 msgstr ""
+
+msgid "Order Overview"
+msgstr ""

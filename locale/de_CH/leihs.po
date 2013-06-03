@@ -2158,3 +2158,6 @@ msgstr "%s gespeichert"
 
 msgid "order"
 msgstr "bestellen"
+
+msgid "Order Overview"
+msgstr "Bestellübersicht"
