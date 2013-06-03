@@ -946,8 +946,8 @@ msgstr "Telefon"
 msgid "Phone%s"
 msgstr "Telefon%s"
 
-msgid "Place reservations on items and then pick them up"
-msgstr "Gegenstände reservieren und abholen"
+msgid "Manage inventory, place reservations on items and pick them up"
+msgstr "Inventar verwalten, Gegenstände reservieren und abholen"
 
 msgid ""
 "Please note that these contracts, while they do belong to approved orders, "

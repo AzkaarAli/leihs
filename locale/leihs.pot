@@ -941,7 +941,7 @@ msgstr ""
 msgid "Phone%s"
 msgstr ""
 
-msgid "Place reservations on items and then pick them up"
+msgid "Manage inventory, place reservations on items and pick them up"
 msgstr ""
 
 msgid ""

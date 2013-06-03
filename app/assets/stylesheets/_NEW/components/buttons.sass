@@ -5,7 +5,6 @@
   font-size: $font-size-xs
   font-weight: bold
   line-height: 2.4em
-  padding: 0 10px
   position: relative
   vertical-align: middle
   white-space: nowrap
@@ -21,8 +20,11 @@
   &:first-letter
     text-transform: uppercase
 
+  &:not([class*='padding'])
+    padding: 0 10px
+
 @mixin button($color, $grad_color_2, $grad_color_1, $grad_color_1_active, $grad_color_2_active) 
-  color: lighten($color, 5%)
+  color: $color
   border: 1px solid rgba(80,80,80,0.3)
   border-bottom: 1px solid rgba(80,80,80,0.4)
   @include background(linear-gradient($grad_color_1 20%, $grad_color_2 80%))
