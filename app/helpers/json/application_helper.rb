@@ -63,7 +63,8 @@ module Json
       case key.to_sym
         when :modellist
           {
-            image_thumb: true
+            image_thumb: true,
+            is_destroyable: true
           }
         when :item_edit
          { :current_borrower => true,
@@ -110,6 +111,7 @@ module Json
            :categories => {}}
         when :model
           {:is_editable => true,
+           :is_destroyable => true,
            :is_package => true,
            :description => true,
            :technical_detail => true,
@@ -119,8 +121,10 @@ module Json
            :images => {},
            :packages => {:in_stock => true, :children => {:model => true}, :preset => :item_edit},
            :is_package => {},
+           :max_partition_capacity => current_inventory_pool.id,
            :attachments => {},
            :properties => {},
+           :partitions => {:group => true},
            :accessories => {}}
         when :order_minimal
           {:user => {:preset => :user},

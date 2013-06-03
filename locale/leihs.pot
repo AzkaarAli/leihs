@@ -18,10 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-msgid "Whatever you enter here is prepended to all inventory numbers for this particular pool. e.g. ABC1, ABC2, ABC3 etc. If you leave this empty, no alphabetic characters are used in the inventory numbers."
+msgid "Additional label in inventory codes"
 msgstr ""
 
-msgid "This e-mail address is used as sender when sending reminder or confirmation e-mails for this particular pool. If you enter nothing, the system default sender address is used."
+msgid "Visible for borrowers in frontend"
+msgstr ""
+
+msgid "Print dialog will open aut."
+msgstr ""
+
+msgid "Used for sending e-mails from leihs"
 msgstr ""
 
 msgid "This note is added to any contract, but can be changed individually before actually printing and signing each contract."
@@ -576,6 +582,9 @@ msgstr ""
 msgid "Inventory Pool"
 msgstr ""
 
+msgid "Inventory pool successfully created"
+msgstr ""
+
 msgid "Inventory Pool is missing"
 msgstr ""
 
@@ -589,6 +598,12 @@ msgid "Inventory code updated"
 msgstr ""
 
 msgid "Inventory pool"
+msgstr ""
+
+msgid "InventoryPool|Email"
+msgstr ""
+
+msgid "InventoryPool|Shortname"
 msgstr ""
 
 msgid "Investment"
@@ -686,6 +701,9 @@ msgstr ""
 msgid "List of Inventory"
 msgstr ""
 
+msgid "List of Inventory Pools"
+msgstr ""
+
 msgid "List of Orders"
 msgstr ""
 
@@ -747,6 +765,9 @@ msgid "Model not present anymore"
 msgstr ""
 
 msgid "Model successfully added as compatible"
+msgstr ""
+
+msgid "Model successfully removed"
 msgstr ""
 
 msgid "Models"
@@ -1223,6 +1244,9 @@ msgid "The accessory was successfully created."
 msgstr ""
 
 msgid "The accessory was successfully deleted."
+msgstr ""
+
+msgid "%s successfully deleted"
 msgstr ""
 
 msgid "The admin role cannot be scoped to an inventory pool"
@@ -2011,3 +2035,54 @@ msgid "Return"
 msgid_plural "Returns"
 msgstr[0] ""
 msgstr[1] ""
+
+msgid "not yet saved"
+msgstr ""
+
+msgid "Prepackaged"
+msgstr ""
+
+msgid "Model saved"
+msgstr ""
+
+msgid "Packages created"
+msgstr ""
+
+msgid "The package is not in stock"
+msgstr ""
+
+msgid "The items of the package can not be edited"
+msgstr ""
+
+msgid "Access"
+msgstr ""
+
+msgid "Group"
+msgstr ""
+
+msgid "Groups"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "List of Groups"
+msgstr ""
+
+msgid "Allocations"
+msgstr ""
+
+msgid "%s created"
+msgstr ""
+
+msgid "Name of the user"
+msgstr ""
+
+msgid "Name of the model"
+msgstr ""
+
+msgid "Name of the group"
+msgstr ""
+
+msgid "%s saved"
+msgstr ""

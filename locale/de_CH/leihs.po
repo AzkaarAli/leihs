@@ -18,11 +18,17 @@ msgstr ""
 "X-Poedit-Country: Switzerland\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-msgid "Whatever you enter here is prepended to all inventory numbers for this particular pool. e.g. ABC1, ABC2, ABC3 etc. If you leave this empty, no alphabetic characters are used in the inventory numbers."
-msgstr "Was Sie hier eingeben, wird vorne an alle Inventarnummern dieses Geräteparks angehängt. z.B. ABC1, ABC2, ABC3 usw. Wenn Sie dies leer lassen, werden keine alphanumerischen Zeichen in den Inventarnummern verwendet."
+msgid "Additional label in inventory codes"
+msgstr "Zusatzbezeichnung in Inventarnummern"
 
-msgid "This e-mail address is used as sender when sending reminder or confirmation e-mails for this particular pool. If you enter nothing, the system default sender address is used."
-msgstr "Diese Mailadresse wird als Absender beim Senden von Erinnerungs- und Bestätigungsmails aus diesem Gerätepark verwendet. Wenn Sie nichts eingeben, wird die Standardadresse des Systems verwendet."
+msgid "Visible for borrowers in frontend"
+msgstr "In Frontend für Ausleihende sichtbar"
+
+msgid "Print dialog will open aut."
+msgstr "Druckdialog wird aut. geöffnet"
+
+msgid "Used for sending e-mails from leihs"
+msgstr "Wird für den Mailversand aus leihs verwendet"
 
 msgid "This note is added to any contract, but can be changed individually before actually printing and signing each contract."
 msgstr "Diese Notiz wird standardmässig jedem Vertrag hinzufgefügt, kann beim Druck eines einzelnen Vertrags aber noch geändert werden."
@@ -581,6 +587,9 @@ msgstr "Inventarcode/Name"
 msgid "Inventory Pool"
 msgstr "Gerätepark"
 
+msgid "Inventory pool successfully created"
+msgstr "Gerätepark erfolgreich erstellt"
+
 msgid "Inventory Pool is missing"
 msgstr "Gerätepark fehlt"
 
@@ -595,6 +604,12 @@ msgstr "Invetarcode aktualisiert"
 
 msgid "Inventory pool"
 msgstr "Gerätepark"
+
+msgid "InventoryPool|Email"
+msgstr "E-Mail"
+
+msgid "InventoryPool|Shortname"
+msgstr "Kurzname"
 
 msgid "Investment"
 msgstr "Investition"
@@ -691,6 +706,9 @@ msgstr "Liste der Verträge"
 msgid "List of Inventory"
 msgstr "Inventarliste"
 
+msgid "List of Inventory Pools"
+msgstr "Liste der Geräteparks"
+
 msgid "List of Orders"
 msgstr "Liste der Bestellungen"
 
@@ -753,6 +771,9 @@ msgstr "Modell existiert nicht mehr"
 
 msgid "Model successfully added as compatible"
 msgstr "Modell erfolgreich als kompatibel hinzugefügt"
+
+msgid "Model successfully deleted"
+msgstr "Model erfolgreich gelöscht"
 
 msgid "Models"
 msgstr "Modelle"
@@ -1234,6 +1255,9 @@ msgstr "Zubehör erstellt."
 
 msgid "The accessory was successfully deleted."
 msgstr "Zubehör gelöscht."
+
+msgid "%s successfully deleted"
+msgstr "%s erfolgreich gelöscht"
 
 msgid "The admin role cannot be scoped to an inventory pool"
 msgstr "Die admin-Rolle kann sich nicht auf einen Gerätepark beziehen"
@@ -2077,3 +2101,54 @@ msgid "Return"
 msgid_plural "Returns"
 msgstr[0] "Rückgabe"
 msgstr[1] "Rückgaben"
+
+msgid "not yet saved"
+msgstr "noch nicht gespeichert"
+
+msgid "Prepackaged"
+msgstr "Vorbereitetes Paket"
+
+msgid "Model saved"
+msgstr "Modell gespeichert"
+
+msgid "Packages created"
+msgstr "Pakete erstellt"
+
+msgid "The package is not in stock"
+msgstr "Das Paket ist nicht am Lager"
+
+msgid "The items of the package can not be edited"
+msgstr "Die Gegenstände dieses Pakets können nicht ausgeliehen werden"
+
+msgid "Access"
+msgstr "Zugriff"
+
+msgid "Group"
+msgstr "Gruppe"
+
+msgid "Groups"
+msgstr "Gruppen"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "List of Groups"
+msgstr "Liste der Gruppen"
+
+msgid "Allocations"
+msgstr "Zuteilungen"
+
+msgid "%s created"
+msgstr "%s erstellt"
+
+msgid "Name of the user"
+msgstr "Name des Benutzers"
+
+msgid "Name of the model"
+msgstr "Name des Modells"
+
+msgid "Name of the group"
+msgstr "Name der Gruppe"
+
+msgid "%s saved"
+msgstr "%s gespeichert"

@@ -88,12 +88,23 @@ module Json
             h[:total_borrowable] = model.total_borrowable_items_for_user(customer_user)
             h[:availability_for_user] = model.availability_periods_for_user(customer_user)
           end
-          
+        end
+
+        if with[:max_partition_capacity]
+          h[:max_partition_capacity] = model.items.scoped_by_inventory_pool_id(with[:max_partition_capacity]).borrowable.count
+        end
+
+        if with[:partitions]
+          h[:partitions] = hash_for model.partitions, with[:partitions]
         end
 
         #tmp# TODO remove this when using permissions
         if with[:is_editable]
           h[:is_editable] = is_privileged_user?
+        end
+
+        if with[:is_destroyable]
+          h[:is_destroyable] = model.can_destroy?
         end
       end
       

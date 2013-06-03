@@ -126,48 +126,46 @@ Funktionalität: Modell
 
   @javascript
   Szenario: Gruppenverteilung editieren
-    Angenommen man öffnet die Liste der Modelle
-    Wenn ich ein bestehendes Modell bearbeite
-    Und die Gruppenkapazität ändere
+    Angenommen ich editieren ein bestehndes Modell mit bereits zugeteilten Kapazitäten
+    Wenn ich bestehende Zuteilungen entfernen
+    Und neue Zuteilungen hinzufügen
     Und ich speichere die Informationen
-    Dann sind die geänderten Gruppenzuteilungen gespiechert
+    Dann sind die geänderten Gruppenzuteilungen gespeichert
 
-  @upcoming
+  @javascript
   Szenario: Modell löschen
-    Angenommen man öffnet die Liste der Modelle
-    Und es existiert ein Modell
-    Und das Modell ist in keinem Vertrag aufgeführt
-    Und das Modell ist keiner Bestellung zugewiesen
-    Und es sind keine Gegenstände zugefügt
-    Wenn ich dieses Modell lösche
-    Dann ist das Modell gelöscht
-    Und ich erhalte eine Bestätigung
+    Angenommen es existiert ein Modell mit folgenden Eigenschaften
+      | in keinem Vertrag aufgeführt |
+      | keiner Bestellung zugewiesen |
+      | keine Gegenstände zugefügt |
+    Wenn ich dieses Modell aus der Liste lösche
+    Und das Modell wurde aus der Liste gelöscht
+    Und das Modell ist gelöscht
 
-  @upcoming
-  Szenariogrundriss: Fehlermeldung beim Modelllöschversuch
-    Angenommen man öffnet die Liste der Modelle
-    Und das Modell hat <Zuweisung> zugewiesen
-    Dann kann ich das Modell nicht löschen
-    Und ich sehe eine Fehlermeldung
+  @javascript
+  Szenariogrundriss: Modelllöschversuch verhindern
+    Angenommen das Modell hat <Zuweisung> zugewiesen
+    Dann kann ich das Modell aus der Liste nicht löschen
 
-    Beispiele:
-      | Vertrag    |
-      | Bestellung |
-      | Gegenstand |
+  Beispiele:
+    | Zuweisung   |
+    | Vertrag     |
+    | Bestellung  |
+    | Gegenstand  |
 
-  @upcoming
+  @javascript
   Szenario: Modelanhängsel löschen
-    Angenommen man öffnet die Liste der Modelle
-    Und es existiert ein Modell
-    Und das Modell ist in keinem Vertrag aufgeführt
-    Und das Modell ist keiner Bestellung zugewiesen
-    Und es sind keine Gegenstände zugefügt
-    Und dieses Modell hat Gruppenkapazitäten zugeteilt
-    Und dieses Modell hat Eigenschaften
-    Und dieses Modell hat Zubehör
-    Und dieses Modell hat Bilder
-    Und dieses Modell hat Anhänge
-    Und dieses Modell hat Kategoriezuweisungen
-    Und dieses Modell hat sich ergänzende Modelle
-    Wenn ich dieses Modell lösche
-    Dann wurden auch alle Anhängsel gelöscht
+    Angenommen es existiert ein Modell mit folgenden Eigenschaften
+      | in keinem Vertrag aufgeführt |
+      | keiner Bestellung zugewiesen |
+      | keine Gegenstände zugefügt |
+      | hat Gruppenkapazitäten zugeteilt |
+      | hat Eigenschaften |
+      | hat Zubehör |
+      | hat Bilder |
+      | hat Anhänge |
+      | hat Kategoriezuweisungen |
+      | hat sich ergänzende Modelle |
+    Wenn ich dieses Modell aus der Liste lösche
+    Und das Modell ist gelöscht
+    Und es wurden auch alle Anhängsel gelöscht

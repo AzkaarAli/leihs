@@ -19,7 +19,7 @@
           %h3.key {{_jed("Name")}}:
           .value{"ng-switch" => "model.is_editable"}
             .input{"ng-switch-when" => "true"}
-              %input{:type => "text", "ng-model" => "model.name"}
+              %input{:type => "text", "ng-model" => "model.name", :name => "name"}
             .readonly{"ng-switch-when" => "false"}
               %span {{model.name}}
         .field
@@ -57,6 +57,45 @@
               %textarea{"ng-model" => "model.hand_over_note"}
             .readonly{"ng-switch-when" => "false"}
               %span {{model.hand_over_note}}
+
+    %section
+      .inner
+        .field
+          %div
+            %h3.key 
+              = "{{_jed('Allocations')}}"
+              = "(max. {{model.max_partition_capacity}})"
+            .value
+              .input
+                %label.container
+                  %input.autocomplete{:type => "text",
+                                        :placeholder => '{{_jed("Group")}}',
+                                        :data => { :autocomplete_element_tmpl => "tmpl/autocomplete/generic",
+                                                   :autocomplete_search_attr => 'query',
+                                                   :url => "/backend/inventory_pools/{{currentInventoryPool.id}}/groups",
+                                                   :autocomplete_display_attribute => "name",
+                                                   :autocomplete_select_callback => "angular.element(el).scope().addPartition",
+                                                   :autocomplete_clear_input_value_on_select => "true",
+                                                   :autocomplete_blur_on_select => "true" }}
+                  .icon.arrow
+            .clear
+          %div.field-inline-entry.partition{"ng-repeat" => "partition in model.partitions", "ng-class" => "{tobedeleted: partition._destroy}"}
+            %span.text-ellipsis{"ng-class" => "{tobedeleted: partition._destroy}", :style => "display: block; float: left; max-width: 200px; line-height: 1em"} {{partition.group.name}}
+            .floatright
+              .capacity{:style => "display: inline-block; padding-right: 16px; vertical-align: top"}
+                %input{"ng-class" => "{tobedeleted: partition._destroy}", :type => :text, "ng-model" => "partition.quantity", :min => 1, :style => "width: 30px; text-align: center", :"ng-disabled" => "partition._destroy"}
+              %div{:style => "display: inline-block;"}
+                %span{"ng-switch" => "!!partition.id"}
+                  %span{"ng-switch-when" => "true"}
+                    %label.clickable.floatright
+                      %input.hidden{type: "checkbox", "ng-model" => "partition._destroy"}
+                      %span{"ng-switch" => "partition._destroy"}
+                        %span{"ng-switch-when" => "true"} {{_jed("undo")}}
+                        %span{"ng-switch-default" => ""} {{_jed("Remove")}}
+                  %span{"ng-switch-default" => ""}
+                    .clickable{"ng-click" => "removePartition(this)"} {{_jed("Remove")}}
+                .clear
+
       
   .right
     %section
@@ -151,26 +190,22 @@
             .clear
           %div.field-inline-entry{"ng-repeat" => "package in model.packages"}
 
-            %span{"ng-class" => "{tobedeleted: package._destroy}", :width => "100"} {{package.inventory_code}}
+            %div.inventory_code.text-ellipsis{"ng-class" => "{tobedeleted: package._destroy}", :width => "100"} {{package.inventory_code}}
             .floatright
-              %span{"ng-switch" => "package.in_stock"}
-                %span{"ng-switch-when" => "false"}
-                  .line
-                    .problems
-                      .container
-                        {{_jed("not in stock")}}
-                        .problem.icon
-                %span{"ng-switch-default" => ""}
-                  %a.clickable{:"ng-click" => "openPackageDialog(this)"} {{_jed("Edit")}}
-                  %span{"ng-switch" => "!!package.id"}
-                    %span{"ng-switch-when" => "true"}
-                      %label.clickable.floatright
-                        %input.hidden{type: "checkbox", "ng-model" => "package._destroy"}
-                        %span{"ng-switch" => "package._destroy"}
-                          %span{"ng-switch-when" => "true"} {{_jed("undo")}}
-                          %span{"ng-switch-default" => ""} {{_jed("Delete")}}
-                    %span{"ng-switch-when" => "false"}
-                      %a.clickable{:"ng-click" => "deletePackage(this)"} {{_jed("Delete")}}
+              %div{:style => "display: inline-block;"}
+                %span.clickable{:"ng-click" => "openPackageDialog(this)"} {{_jed("Edit")}}
+              %div{:style => "display: inline-block;"}
+                %span{"ng-switch" => "!!package.id"}
+                  %span{"ng-switch-when" => "true"}
+                    %span{"ng-switch" => "package.in_stock"}
+                      %span{"ng-switch-when" => "true"}
+                        %label.clickable
+                          %input.hidden{type: "checkbox", "ng-model" => "package._destroy"}
+                          %span{"ng-switch" => "package._destroy"}
+                            %span{"ng-switch-when" => "true"} {{_jed("undo")}}
+                            %span{"ng-switch-default" => ""} {{_jed("Delete")}}
+                  %span{"ng-switch-when" => "false"}
+                    %a.clickable{:"ng-click" => "deletePackage(this)"} {{_jed("Delete")}}
 
       %br
       .inner
@@ -181,8 +216,7 @@
               .input
                 %label.container
                   %input.autocomplete{:type => "text",
-                                        :placeholder => "Modell",
-                                        :title => "Modell",
+                                        :placeholder => '{{_jed("Model")}}',
                                         :data => { :autocomplete_element_tmpl => "tmpl/autocomplete/generic",
                                                    :autocomplete_search_attr => 'query',
                                                    :url => "/backend/inventory_pools/{{currentInventoryPool.id}}/models",
@@ -190,6 +224,7 @@
                                                    :autocomplete_select_callback => "angular.element(el).scope().addCompatible",
                                                    :autocomplete_clear_input_value_on_select => "true",
                                                    :autocomplete_blur_on_select => "true" }}
+                  .icon.arrow
             .clear
           %div.field-inline-entry{"ng-repeat" => "compatible in model.compatibles"}
             {{compatible.name}}
@@ -222,7 +257,6 @@
                   %input{:name => "key", :type => :text, :"ng-model" => "property.key", :placeholder => '{{_jed("Key")}}'}
                   %input{:type => :text, :"ng-model" => "property.value", :placeholder => '{{_jed("Value")}}'}
                   %a.clickable.floatright{"ng-click" => "removeProperty(this)"} x
-
 
   .clear
   %span.loading{"ng-show" => "isLoading"}

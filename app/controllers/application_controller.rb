@@ -11,10 +11,10 @@ class ApplicationController < ActionController::Base
 
   def index
     if logged_in?
-      if current_user.has_role?('manager', nil, false)
-        redirect_to backend_path
+      if current_user.has_role?('manager', nil, false) or current_user.has_role?('admin')
+        redirect_to backend_path, flash: flash
       else
-        redirect_to categories_path
+        redirect_to categories_path, flash: flash
       end
     else
       render "splash/show"
