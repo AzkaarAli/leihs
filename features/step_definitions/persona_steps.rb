@@ -7,6 +7,7 @@ Angenommen(/^persona "(.*?)" existing$/) do |persona_name|
 end
 
 Given /^I am "([^"]*)"$/ do |persona_name|
+  step 'persona "%s" existing' % persona_name
   step "I am logged in as '%s' with password 'password'" % persona_name.downcase
 end
 

@@ -24,8 +24,13 @@ Leihs::Application.routes.draw do
   # Borrow Section
   namespace :borrow do
     get "/", :to => "application#start", :as => "start"
+    get "collections", :to => "collections#index", :as => "collections"
+    get "inventory_pools", :to => "inventory_pools#index", :as => "inventory_pools"
     get "models", :to => "models#index", :as => "models"
     get "order", :to => "orders#unsubmitted_order", :as => "unsubmitted_order"
+    get "orders", :to => "orders#index", :as => "orders"
+    get "returns", :to => "returns#index", :as => "returns"
+    get "user", :to => "users#current", :as => "current_user"
   end
 
   # Categories

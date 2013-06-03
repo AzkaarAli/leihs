@@ -6,9 +6,6 @@
 
     %li#topbar-search.topbar-item.topbar-search.separated-left{:class => current_page?("search") ? "active" : nil}
       = render :partial => 'topbar_search'
-    
-    %li.topbar-item.separated-left{:class => true ? "active" : nil}
-      %a.topbar-item-inner= _("Borrow")
 
     %li.topbar-item.separated-left
       %a.topbar-item-inner
@@ -20,14 +17,19 @@
         %span.badge 5
         = _("Returns")
 
-    %li.topbar-item.separated-left{:class => false ? "active" : nil}
+    %li.topbar-item.separated-left
+      %a.topbar-item-inner
+        %span.badge 2
+        = _("Orders")
+
+    %li.topbar-item.separated-left
       %a.topbar-item-inner{:href => backend_path}= _("Inventory Pools")
 
-    %li.topbar-item.separated-left{:class => false ? "active" : nil}
+    %li.topbar-item.separated-left
       %a.topbar-item-inner{:href => backend_path}= _("Manage")
 
-    %li.topbar-item.dropdown-holder.separated-left{:class => current_page?("current_user") ? "active" : nil}
-      %a.topbar-item-inner.max-width-s-alt.text-ellipsis
+    %li.topbar-item.separated-left.dropdown-holder{:class => current_page?(borrow_current_user_path) ? "active" : nil}
+      %a.topbar-item-inner.max-width-s-alt.text-ellipsis{:href => borrow_current_user_path}
         = current_user
         %i.arrow.down
 

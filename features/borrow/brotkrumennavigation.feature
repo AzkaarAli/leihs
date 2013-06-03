@@ -8,7 +8,7 @@ Funktionalität: Brotkrumennavigation
 
   Szenario: Brotkrumennavigation
     Angenommen ich bin "Normin"
-    Dann sehe ich auf jeder Seite die Brotkrumennavigation
+    Dann sehe ich die Brotkrumennavigation
 
   Szenario: Home-Button der Brotkrumennavigation
     Angenommen ich bin "Normin"

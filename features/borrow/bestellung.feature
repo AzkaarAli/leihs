@@ -9,7 +9,6 @@ Funktionalität: Bestellung
   Szenario: Bestellfensterchen
     Angenommen persona "Normin" existing
     Und man ist eingeloggt als "Normin"
-    Und man befindet sich auf irgendeiner Startseite ausser der Bestellübersicht
     Dann sehe ich das Bestellfensterchen
 
   Szenario: Kein Bestellfensterchen

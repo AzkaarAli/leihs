@@ -6,15 +6,16 @@ Funktionalität: Navigation
   möchte ich als Ausleiher
   Navigationsmöglichkeiten haben
 
+  @javascript
   Szenario: Navigation für Ausleihenden
     Angenommen ich bin Normin
-    Dann seh ich die Navigation auf jeder Seite
+    Dann seh ich die Navigation
     Und die Navigation beinhaltet Geräteparks, Benutzer und Logout
 
   Szenario: Navigation für Manager
     Angenommen ich bin Pius
-    Dann seh ich die Navigation auf jeder Seite
-    Und die Navigation beinhaltet Backend, Geräteparks, Benutzer und Logout
+    Dann seh ich die Navigation
+    Und die Navigation beinhaltet Verwalten, Geräteparks, Benutzer und Logout
 
   Szenario: Home-Button
     Angenommen ich bin Normin

@@ -9,4 +9,4 @@ Funktionalität: Suche
   Szenario: Suchfeld
     Angenommen persona "Normin" existing
     Und man ist "Normin"
-    Dann sieht man auf jeder Seite das Suchfeld
+    Dann sieht man die Suche

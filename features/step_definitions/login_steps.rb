@@ -14,14 +14,14 @@ end
 
 Given "I am logged in as '$username' with password '$password'" do |username, password|
   @current_user = User.where(:login => username).first
-  I18n.locale = @current_user.language.locale_name.to_sym
+  I18n.locale = if @current_user.language then @current_user.language.locale_name.to_sym else Language.default_language end
   case Capybara.current_driver
     when :selenium
       visit "/"
-      find("#login").click
+      find("[href='#{login_path}']").click
       fill_in 'username', :with => username
       fill_in 'password', :with => password
-      find(".login .button").click
+      find("[type='submit']").click
     when :rack_test
       step "I log in as '%s' with password '%s'" % [username, password]
   end
@@ -39,7 +39,6 @@ end
 
 # This one 'really' goes through the auth process
 When /^I log in as '([^']*)' with password '([^']*)'$/ do |username, password|
-  binding.pry
   post "/authenticator/db/login", {:login => {:username => username, :password => password}}
 end
 
