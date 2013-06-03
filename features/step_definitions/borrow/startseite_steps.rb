@@ -18,18 +18,20 @@ Und(/^man sieht die Überschrift "(.*?)"$/) do |arg1|
   find ".row a", text: _("Overview")
 end
 
-Wenn(/^ich über eine Hauptkategorie fahre$/) do
-  @first_main_category = @current_user.categories.select{|c| c.parents.empty?}.first
-  page.execute_script("$('*[data-category_id] .dropdown-holder').trigger('mouseover');")
-  step "ensure there are no active requests"
+Wenn(/^ich über eine Hauptkategorie mit Kindern fahre$/) do
+  @main_category = @current_user.categories.select{|c| c.parents.empty? and not c.children.empty?}.first
+  page.execute_script %Q{$('*[data-category_id] .padding-inset-s:contains("#{@main_category.name}")').trigger('mouseenter')}
+  page.execute_script %Q{$('*[data-category_id] .padding-inset-s:contains("#{@main_category.name}")').closest('*[data-category_id]').find('.dropdown').show()}
 end
 
 Dann(/^sehe ich die Kinder dieser Hauptkategorie$/) do
-  second_level_categories = @first_main_category.children
+  second_level_categories = @main_category.children
   @second_level_category = second_level_categories.first
   wait_until {find "a", text: @second_level_category.name}
-  second_level_categories.each do |c|
-    find("a", text: @first_main_category.name).find(".dropdown a", text: c.name)
+  within find("*[data-category_id] .padding-inset-s", text: @main_category.name).find(:xpath, "../..").find(".dropdown-holder") do
+    second_level_categories.each do |c|
+      find(".dropdown a", text: c.name)
+    end
   end
 end
 
@@ -38,4 +40,5 @@ Wenn(/^ich eines dieser Kinder anwähle$/) do
 end
 
 Dann(/^lande ich in der Modellliste für diese Kategorie$/) do
+  expect(current_url =~ Regexp.new(Regexp.escape borrow_models_path(category_id: @second_level_category.id))).not_to be_nil
 end

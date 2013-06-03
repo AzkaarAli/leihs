@@ -2,7 +2,6 @@
 
 Angenommen(/^man befindet sich auf irgendeiner Startseite ausser der Bestellübersicht$/) do
   pages_elements = all(".topbar-item-inner").slice 2..4
-  pages_elements << 
 end
 
 Angenommen(/^man befindet sich auf der Bestellübersicht$/) do

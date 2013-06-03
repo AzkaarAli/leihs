@@ -18,7 +18,7 @@ Funktionalität: Startseite
     Angenommen persona "Normin" existing
     Und man ist eingeloggt als "Normin"
     Und man befindet sich auf der Startseite
-    Wenn ich über eine Hauptkategorie fahre
+    Wenn ich über eine Hauptkategorie mit Kindern fahre
     Dann sehe ich die Kinder dieser Hauptkategorie
     Wenn ich eines dieser Kinder anwähle
     Dann lande ich in der Modellliste für diese Kategorie
