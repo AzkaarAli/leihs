@@ -8,5 +8,5 @@ Funktionalität: Suche
 
   Szenario: Suchfeld
     Angenommen persona "Normin" existing
-    Und man ist "Normin"
+    Und man ist eingeloggt als "Normin"
     Dann sieht man die Suche
