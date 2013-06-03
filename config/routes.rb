@@ -25,6 +25,7 @@ Leihs::Application.routes.draw do
   namespace :borrow do
     get "/", :to => "application#start", :as => "start"
     get "models", :to => "models#index", :as => "models"
+    get "order", :to => "orders#unsubmitted_order", :as => "unsubmitted_order"
   end
 
   # Categories

@@ -6,7 +6,6 @@ Funktionalität: Suche
   möchte ich als Ausleiher
   eine Suchfunktionalität
 
-  @javascript
   Szenario: Suchfeld
     Angenommen persona "Normin" existing
     Und man ist "Normin"
