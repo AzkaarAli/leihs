@@ -9,6 +9,7 @@ end
 Given /^I am "([^"]*)"$/ do |persona_name|
   step 'persona "%s" existing' % persona_name
   step 'man ist eingeloggt als "%s"' % persona_name
+  @current_inventory_pool = @current_user.managed_inventory_pools.first 
 end
 
 Angenommen /^man ist "([^"]*)"$/ do |persona_name|

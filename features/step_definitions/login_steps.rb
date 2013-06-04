@@ -28,7 +28,6 @@ Given "I am logged in as '$username' with password '$password'" do |username, pa
   end
 end
 
-
 Given "I log in as a $role for inventory pool '$ip_name'$with_access_level" do |role, ip_name,with_access_level|
   # use default user name
   step "a #{role} 'inv_man_0' for inventory pool '#{ip_name}'#{with_access_level}"
@@ -62,17 +61,13 @@ end
 
 When /^"([^"]*)" sign in successfully he is redirected to the "([^"]*)" section$/ do |login, section_name|
   visit "/logout"
-  visit "/"
-  find("#login").click
-  fill_in 'username', :with => login.downcase
-  fill_in 'password', :with => 'password'
-  find(".login .button").click
-  page.has_css?("#main.wrapper", :visible => true)
+  "I am logged in as '$login' with password 'password'"
   find(".navigation .active.#{section_name.downcase}")
 end
 
 Angenommen(/^man ist eingeloggt als "(.*?)"$/) do |persona|
   @current_user = User.where(:login => persona.downcase).first
+  I18n.locale = if @current_user.language then @current_user.language.locale_name.to_sym else Language.default_language end
   visit root_path
   find("a[href='#{login_path}']").click
   fill_in 'username', :with => persona.downcase
